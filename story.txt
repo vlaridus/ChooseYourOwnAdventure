@@ -1,0 +1,31 @@
+<!-- custom scripting language used for the game. -->
+# intro: [sleep, go back to sleep, back to sleep](wakeUpPrison) | [downstairs, go downstairs, see what the loud noise was](warRealize)
+	"It's a cold Sunday in the middle of December. You wake up to a loud noise coming from outside, likely in your backyard. Although curious, you hesitate, as it's 6am and you want to go back to bed. {NEWLINE}Do you go downstairs and see what that loud noise was or go back to sleep?"
+
+# warRealize: [look for help, seek help](usGeneral) | [hide](soldierHitsYou)
+	"War. You realize that the President really did it; Trump declared war on North Korea. All of a sudden, {NAME} hears the front door open. {NEWLINE}Do you hide from whoever opened the door or seek help from potential help from the US military."
+
+# usGeneral: [assistance from military, assistance](deathUsGeneral) | [keep quiet, quiet](soldierHitsYou)
+	"You see a US general officer barge in through your front door. He hasn't noticed you yet. {NEWLINE}Do you decide to ask for assistance from the military, or keep quiet for your safety?"
+
+# deathUsGeneral: [](playAgain)
+	"Unfortunately, the United States military has been ordered to kill anyone and everyone. {NAME} dies.{NEWLINE}Game Over. Press enter to continue."
+
+# soldierHitsYou: [](wakeUpPrison) 
+	"You keep quiet despite the urge to ask for help. A few hours later, a North Korean soldier finds you in the closet and knocks you out with his handgun. {NAME} passes out."
+
+# wakeUpPrison: [go with soldier, come with him, go with him](northKoreanHandcuffs) | [don't move, do not move](northKoreanForces)
+	"{NAME} opens their eyes. You find yourself in a prison cell, surrounded by hundreds of North Korea soldiers. One of the soldiers looks at you and gestures to come with him.{NEWLINE}Do you go with the soldier or not move at all?"
+
+# northKoreanForces: [fight back](deadInOffice) | [listen](northKoreanHandcuffs)
+	"The North Korean soldier grabs you and forces you to go with him.{NEWLINE}Do you listen? Or will you fight back?"
+
+# northKoreanHandcuffs: [run away to the window, run to window](escapeToWindow) | [continue on, continue on with soldiers](deadInOffice)
+	"The North Korean soldier, accompanied by two other soldiers put handcuffs on you and walk you to a fireplace. While on your way there, however, you notice a small window.{NEWLINE}Do you run away to the window or continue on with the soldiers?"
+
+# escapeToWindow: [turn back](deadInOffice) | [jump out window, jump, jump regardless](riverHappyEnding)
+	"{NAME} successfully escapes from the soldiers, but as {NAME} approaches the window, they realize that the fog is too thick to tell how high they are up.{NEWLINE}Do you jump regardless? Or do you turn back?"
+# riverHappyEnding: [](playAgain)
+	"Wow. You beat my game. Well done. {NEWLINE}Press enter to continue."
+# deadInOffice: [](playAgain)
+	"You die to the North Korean soldiers.{NEWLINE}Game Over. {NEWLINE}Press enter to continue"
